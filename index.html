@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCENTE TI | Innovación Educativa para Jóvenes</title>
+    <meta name="description" content="Docente TI es la plataforma líder en educación tecnológica para jóvenes. Aprende programación, IA y diseño con expertos en la industria.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo-container" id="homeLogo" style="display: flex; align-items: center; gap: 10px; cursor: pointer;" onclick="window.location.reload()">
+            <img src="assets/logo_bio.png" alt="DOCENTE TI Logo" style="height: 50px; border-radius: 50%; filter: saturate(1.8) brightness(1.1); transition: 0.3s;">
+            <div class="logo">DOCENTE TI</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio" onclick="showMain()">Inicio</a></li>
+            <li><a href="#cursos" onclick="showMain()">Cursos</a></li>
+            <li><a href="#comunidad">Comunidad</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+        </ul>
+        <a href="#contacto" class="cta-button">Únete Ahora</a>
+    </nav>
+
+    <div id="main-view">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <div id="hero-logo-container" style="margin-bottom: 2rem;">
+                    <img src="assets/logo_bio.png" alt="Logo Bio" style="height: 120px; width: 120px; border-radius: 50%; filter: saturate(1.8) brightness(1.1); box-shadow: 0 0 25px var(--primary-glow); animation: pulse-logo 3s infinite alternate;">
+                </div>
+                <h1>Transforma tu Futuro con <span>DOCENTE TI</span></h1>
+                <p>Domina el pensamiento computacional y la lógica de programación mediante nuestra ruta pedagógica basada en Design Thinking. De los fundamentos a la creación de software con rigor académico.</p>
+                <div class="hero-btns">
+                    <a href="#cursos" class="cta-button">Explorar Cursos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero.png" alt="Estudiantes usando tecnología educativa" id="mainHeroImg">
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="cursos" class="courses">
+            <div class="section-title">
+                <h2>Nuestros Programas Top</h2>
+                <p>Diseñados para mentes inquietas y creativas.</p>
+            </div>
+            <div class="courses-grid">
+                <div class="card">
+                    <img src="assets/web_dev.png" alt="Curso de Desarrollo Web">
+                    <div class="card-icon"><i data-lucide="code-2"></i></div>
+                    <h3>Master en Web Dev</h3>
+                    <p>Desde los fundamentos hasta React y Node.</p>
+                    <div class="card-footer">
+                        <span class="price">$19.99/mes</span>
+                        <a href="#" class="cta-button">Ver Más</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/ai_robotics.png" alt="Curso de IA y Robótica">
+                    <div class="card-icon"><i data-lucide="cpu"></i></div>
+                    <h3>IA & Robótica 101</h3>
+                    <p>Explora el futuro hoy mismo.</p>
+                    <div class="card-footer">
+                        <span class="price">$24.99/mes</span>
+                        <a href="#" class="cta-button">Ver Más</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/digital_design.png" alt="Curso de Diseño Digital">
+                    <div class="card-icon"><i data-lucide="palette"></i></div>
+                    <h3>Diseño UI/UX Pro</h3>
+                    <p>Interfaces que las personas aman usar.</p>
+                    <div class="card-footer">
+                        <span class="price">$14.99/mes</span>
+                        <a href="#" class="cta-button">Ver Más</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/algorithms.png" alt="Curso de Algoritmos">
+                    <div class="card-icon" style="background: var(--secondary-glow);"><i data-lucide="binary"></i></div>
+                    <h3>Fundamentos de Algoritmos</h3>
+                    <p>Domina la secuencia de instrucciones precisas, finitas y definidas para resolver problemas reales mediante lógica computacional y pseudocódigo.</p>
+                    <div class="card-footer">
+                        <span class="price">Acceso Gratuito</span>
+                        <button onclick="enterCourse('algoritmos')" class="cta-button" style="border: none; cursor: pointer;">Empezar Ruta</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Roadmap Section -->
+    <section id="algoritmos" class="roadmap-section" style="display: none; padding-top: 120px;">
+        <div class="section-title">
+            <h2>Fundamentos de Algoritmos</h2>
+            <p>Nuestra ruta estructurada integra el diseño humano con el rigor técnico de la computación para dominar la lógica universal.</p>
+            <button onclick="showMain()" style="background: none; border: none; color: var(--text-muted); cursor: pointer; margin-top: 1rem;"><i data-lucide="arrow-left" style="width: 14px; height: 14px; vertical-align: middle;"></i> Volver al Catálogo</button>
+        </div>
+        
+        <div class="roadmap-container">
+            <div class="roadmap-item">
+                <div class="roadmap-dot" style="background: #ef4444;"></div>
+                <div class="roadmap-content" style="border-left: 4px solid #ef4444;">
+                    <h3>Fase 1: Empatizar</h3>
+                    <p>Identifica y comprende el problema desde la perspectiva del usuario final, recolectando requisitos y datos de entrada.</p>
+                    <a href="actividades_algoritmos.html" target="_blank" style="font-size: 0.7rem; color: #ef4444; display: block; margin-top: 10px;">Ver Guía →</a>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-dot" style="background: #f59e0b;"></div>
+                <div class="roadmap-content" style="border-left: 4px solid #f59e0b;">
+                    <h3>Fase 2: Definir</h3>
+                    <p>Análisis técnico del problema: organiza la información, identifica variables de entrada/salida y define tipos de datos (Enteros, Reales, Lógicos).</p>
+                    <a href="actividades_definir.html" target="_blank" style="font-size: 0.7rem; color: #f59e0b; display: block; margin-top: 10px;">Ver Guía →</a>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-dot" style="background: #10b981;"></div>
+                <div class="roadmap-content" style="border-left: 4px solid #10b981;">
+                    <h3>Fase 3: Idear</h3>
+                    <p>Diseño de algoritmos cualitativos y cuantitativos. Estructuración lógica mediante diagramas de flujo y pseudocódigo inicial.</p>
+                    <a href="presentacion_algoritmos.html" target="_blank" style="font-size: 0.7rem; color: #10b981; display: block; margin-top: 10px;">Ver Presentación →</a>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-dot" style="background: #3b82f6;"></div>
+                <div class="roadmap-content" style="border-left: 4px solid #3b82f6;">
+                    <h3>Fase 4: Prototipar</h3>
+                    <p>Implementación técnica en PSeInt. Dominio de estructuras de control secuenciales, condicionales (Si-Entonces) e iterativas (Mientras, Para).</p>
+                    <a href="actividades_pseint_condicionales.html" target="_blank" style="font-size: 0.7rem; color: #3b82f6; display: block; margin-top: 10px;">Ver Guía →</a>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-dot" style="background: #8b5cf6;"></div>
+                <div class="roadmap-content" style="border-left: 4px solid #8b5cf6;">
+                    <h3>Fase 5: Testear</h3>
+                    <p>Validación de la solución mediante datos de prueba, depuración de errores y optimización usando arreglos y matrices multidimensionales.</p>
+                    <a href="actividades_testear.html" target="_blank" style="font-size: 0.7rem; color: #8b5cf6; display: block; margin-top: 10px;">Ver Guía →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Centro de Recursos Global -->
+        <div style="margin-top: 5rem; padding: 4rem; background: var(--bg-card); border-radius: 40px; border: 1px solid var(--glass-border); backdrop-filter: blur(20px);">
+            <h2 style="text-align: center; margin-bottom: 3rem; background: linear-gradient(to right, #818cf8, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-size: 2.5rem;">Centro de Documentación y Recursos</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+                
+                <!-- Ruta de Aprendizaje (Interno) -->
+                <div>
+                    <h3 style="color: var(--nature-green); font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="map"></i> Ruta Design Thinking
+                    </h3>
+                    <ul style="list-style: none; font-size: 0.9rem; line-height: 2.2;">
+                        <li><a href="actividades_algoritmos.html" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Fase 1: Empatizar</a></li>
+                        <li><a href="actividades_definir.html" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Fase 2: Definir</a></li>
+                        <li><a href="presentacion_algoritmos.html" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Fase 3: Idear</a></li>
+                        <li><a href="actividades_pseint_condicionales.html" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Fase 4: Prototipar</a></li>
+                        <li><a href="actividades_testear.html" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Fase 5: Testear</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ejercicios y Ejemplos (Nuevo) -->
+                <div>
+                    <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="code"></i> Ejercicios Prácticos
+                    </h3>
+                    <ul style="list-style: none; font-size: 0.9rem; line-height: 2.2;">
+                        <li><a href="https://discoduroderoer.es/50-ejercicios-pseint-para-practicar-pseudocodigo/" target="_blank" style="color: var(--text-muted); text-decoration: none;">• 50 Ejercicios DiscoDurodeRoer</a></li>
+                        <li><a href="https://pseint.sourceforge.net/index.php?page=ejemplos.php" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Ejemplos Oficiales PSeInt</a></li>
+                        <li><a href="https://clubprogramador.wordpress.com/2018/02/08/pseint-ejemplos-basicos-resueltos/" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Ejemplos Básicos Resueltos</a></li>
+                        <li><a href="banco_actividades_grado9.html" target="_blank" style="color: var(--primary); font-weight: bold; text-decoration: none;">• Banco Maestro (Grado 9)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Video Lecciones (Nuevo) -->
+                <div>
+                    <h3 style="color: var(--red); font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="play-circle"></i> Video Lecciones
+                    </h3>
+                    <ul style="list-style: none; font-size: 0.9rem; line-height: 2.2;">
+                        <li><a href="https://www.youtube.com/watch?v=WW9cn-bdVlQ" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Introducción a la Lógica</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Fbd5fkK5gaE" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Estructuras de Control</a></li>
+                        <li><a href="https://youtu.be/I9zCEqyDeYg" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Lógica de Programación I</a></li>
+                        <li><a href="https://youtu.be/0_5xosqMKhw" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Lógica de Programación II</a></li>
+                    </ul>
+                </div>
+
+                <!-- Documentación Académica -->
+                <div>
+                    <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="graduation-cap"></i> Material Académico
+                    </h3>
+                    <ul style="list-style: none; font-size: 0.9rem; line-height: 2.2;">
+                        <li><a href="https://www.youtube.com/playlist?list=PLRt_sFUAViN3jz0JrrFuwDue-Fp9WYHqg" target="_blank" style="color: var(--primary); font-weight: bold; text-decoration: none;">• Curso Maestro Certificado (Edutin)</a></li>
+                        <li><a href="resumen_videos.html" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Resumen de Lecciones (Video)</a></li>
+                        <li><a href="https://www.uniremington.edu.co/wp-content/uploads/2024/01/Logica_de_Programacion.pdf" target="_blank" style="color: var(--text-muted); text-decoration: none;">• PDF Lógica UniRemington</a></li>
+                        <li><a href="https://pseint.sourceforge.net/" target="_blank" style="color: var(--text-muted); text-decoration: none;">• Documentación PSeInt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="quiz-section" style="margin-top: 5rem;">
+            <div class="section-title">
+                <h2>Ponte a Prueba</h2>
+                <p>¿Qué tanto has aprendido sobre algoritmos?</p>
+            </div>
+            <div class="quiz-container">
+                <div id="quiz-start">
+                    <i data-lucide="brain" style="width: 60px; height: 60px; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h3>Evaluación de Lógica</h3>
+                    <p style="margin-bottom: 2rem;">Responde las preguntas para obtener tu rango.</p>
+                    <button onclick="startQuiz()" class="cta-button">Empezar Quiz</button>
+                </div>
+                <div id="quiz-box" style="display: none;">
+                    <div class="quiz-header">
+                        <span id="question-number">Pregunta 1 de 5</span>
+                        <div class="progress-bar"><div id="progress" class="progress-inner"></div></div>
+                    </div>
+                    <h3 id="question-text" style="margin: 2rem 0;"></h3>
+                    <div id="options-container" class="options-grid"></div>
+                    <div id="quiz-footer" style="display: none; margin-top: 2rem;">
+                        <button onclick="nextQuestion()" class="cta-button">Siguiente Pregunta</button>
+                    </div>
+                </div>
+                <div id="quiz-result" style="display: none;">
+                    <h2 id="result-title"></h2>
+                    <p id="result-score" style="font-size: 2rem; margin: 2rem 0; font-weight: 800; color: var(--primary);"></p>
+                    <button onclick="restartQuiz()" class="cta-button">Reintentar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 5rem; padding: 4rem 2rem; text-align: center;">
+        <p style="color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 DOCENTE TI | TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
